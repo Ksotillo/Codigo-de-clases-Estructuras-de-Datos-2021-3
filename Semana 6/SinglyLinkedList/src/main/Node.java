@@ -8,28 +8,49 @@ package main;
 /**
  *
  * @author Ksotillo
+ * @param <T>
  */
-public class Node {
-    private int data;
+public class Node<T> {
+    private T data;
     private Node next;
     
-    public Node (int datum) {
+    /**
+     *
+     * @param datum
+     */
+    public Node (T datum) {
         this.data = datum;
         this.next = null;
     }
 
-    public int getData() {
+    /**
+     * Get Node's data
+     * @return the data inside Node
+     */
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    /**
+     * Sets new data to Node
+     * @param data
+     */
+    public void setData(T data) {
         this.data = data;
     }
 
+    /**
+     *
+     * @return a reference to the next Node
+     */
     public Node getNext() {
         return next;
     }
 
+    /**
+     * Sets new Node to reference to
+     * @param next
+     */
     public void setNext(Node next) {
         this.next = next;
     }

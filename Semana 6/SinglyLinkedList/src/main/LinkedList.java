@@ -8,23 +8,39 @@ package main;
 /**
  *
  * @author Ksotillo
+ * @param <T>
  */
-public class LinkedList {
-    private Node head;
-    private Node tail;
+public class LinkedList<T> {
+    private Node<T> head;
+    private Node<T> tail;
 
+    /**
+     * Constructor for initially empty list
+     */
     public LinkedList() {
         this.head = this.tail = null;
     }
 
-    public LinkedList(Node n) {
+    /**
+     * Constructor for list initially with one node
+     * @param n
+     */
+    public LinkedList(Node<T> n) {
         this.head = this.tail = n;
     }
     
+    /**
+     * Checks whether list is empty or not
+     * @return 
+     */
     private boolean isEmpty() {
         return this.head == null;
     }
     
+    /**
+     *  Get the current size of the list
+     * @return 
+     */
     public int size() {
         int i = 0;
         
@@ -32,7 +48,7 @@ public class LinkedList {
             return 0;
         }
         
-        Node aux = this.head;
+        Node<T> aux = this.head;
         while(aux != null) {
             aux = aux.getNext();
             i++;
@@ -40,8 +56,12 @@ public class LinkedList {
         return i;
     }
     
-    public void addFirst(int datum) {
-        Node n = new Node(datum);
+    /**
+     * Add datum to the first position of the list
+     * @param datum Datum to be added
+     */
+    public void addFirst(T datum) {
+        Node<T> n = new Node(datum);
         if (isEmpty()) {
             this.head = n;
             this.tail = n;
@@ -53,8 +73,12 @@ public class LinkedList {
         }
     }
     
-    public void addLast(int datum) {
-        Node n = new Node(datum);
+    /**
+     * Add datum to the last position of the list
+     * @param datum Datum to be added
+     */
+    public void addLast(T datum) {
+        Node<T> n = new Node(datum);
         if (isEmpty()) {
             this.head = n;
             this.tail = n;
@@ -66,7 +90,12 @@ public class LinkedList {
         }
     }
     
-    public void add(int datum, int i) {
+    /**
+     * Add datum to the specified position
+     * @param datum Datum to be added
+     * @param i Position to be added in
+     */
+    public void add(T datum, int i) {
         if (isEmpty() || i == 0) {
             this.addFirst(datum);
         } else if (i >= (size() - 1)) {
@@ -74,7 +103,7 @@ public class LinkedList {
         } else if (i < 0) {
             this.add(datum, size() + i);
         }else {
-            Node n = new Node(datum);
+            Node<T> n = new Node(datum);
             Node aux = this.head; // Nodo previo
             int count = 0;
             while(count < i -1) {
@@ -86,25 +115,33 @@ public class LinkedList {
         }
     }
 
-    public int deleteFirst() {
+    /**
+     * Deletes first element of the list
+     * @return The data of the first element
+     */
+    public T deleteFirst() {
         if (isEmpty()) {
-            return -1;
+            return null;
         }
-        Node temp = this.head;
+        Node<T> temp = this.head;
         this.head= this.head.getNext();
         temp.setNext(null);
         return temp.getData();
     }
     
-    public int deleteLast() {
+    /**
+     * Deletes last element of the list
+     * @return The data of the last element
+     */
+    public T deleteLast() {
         if (isEmpty()) {
-            return -1;
+            return null;
         }
-        Node pre = this.head;
+        Node<T> pre = this.head;
         while(pre.getNext().getNext() != null) {
             pre = pre.getNext();
         }
-        Node temp = pre.getNext();
+        Node<T> temp = pre.getNext();
         pre.setNext(null);
         this.tail = pre;
         temp.setNext(null);
@@ -112,10 +149,14 @@ public class LinkedList {
         
     }
     
-    
-    public int delete(int i) {
+    /**
+     * Deletes the element at the specified position
+     * @param i The position to be deleted
+     * @return The data of the deleted element
+     */
+    public T delete(int i) {
         if (isEmpty()) {
-            return -1;
+            return null;
         } else if (i == 0) {
             return deleteFirst();
         } else if (i == size() -1) {
@@ -124,21 +165,24 @@ public class LinkedList {
             return delete(size() + i);
         } else if (i > size() - 1) {
             System.out.println("\nError");
-            return -1;
+            return null;
         } else {
-            Node aux = this.head;
+            Node<T> aux = this.head;
             int count = 0;
             while(count < i-1) {
                 aux = aux.getNext();
                 count++;
             }
-            Node del = aux.getNext();
+            Node<T> del = aux.getNext();
             aux.setNext(del.getNext());
             del.setNext(null);
             return del.getData();
         }
     }
     
+    /**
+     * Prints the list in a pretty format
+     */
     public void print() {
         if (isEmpty()) {
             System.out.println("Vacia");
