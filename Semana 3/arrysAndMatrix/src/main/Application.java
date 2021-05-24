@@ -13,6 +13,19 @@ import java.util.Arrays;
  */
 public class Application {
     
+    void functionDoingSomeRandomThingsWithArray(int[] array) {
+        for (int i = 0; i < array.length; i*=2) {
+            // Pretty hard code
+        }
+    }
+    
+    void functionDoingSomeMoreRandomThingsWithArray(int[] array) {
+        for (int i = array.length; i > 0; i/=2) {
+            // Pretty hard code
+        }
+    }
+    
+    
     public static int adjacentElementsProduct(int[] array) {
         int max = array[0] * array[1];
         for (int i = 1; i < array.length - 1; i++) {
@@ -100,6 +113,22 @@ public class Application {
         }
         
         return sum;
+    }
+    
+    void printCubicMatrix(int[][][] matrix) {
+    for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0; j < matrix.length; j++) {
+            for (int k = 0; k < matrix.length; k++) {
+                System.out.println(matrix[i][j][k]);
+            }
+        }
+    }
+}
+    
+    int fibonacciSum(int number) {
+        if (number <= 1) return number;
+        
+        return  fibonacciSum(number - 2) + fibonacciSum(number - 1);
     }
     
     /**
