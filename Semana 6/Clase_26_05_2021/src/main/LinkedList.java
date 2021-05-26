@@ -243,7 +243,7 @@ public class LinkedList<T> {
 //    
     
         
-    public void completeList() throws InterruptedException {
+    public void completeList() {
         Node current = this.head;
         int index = 1;
         // 7, 8, 10, 13
