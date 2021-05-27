@@ -227,59 +227,83 @@ public class LinkedList<T> {
             current = current.getNext();
         }
     }
-    
+    /**
+     * Link and sort our list accordingly
+     * @param n1 The first node to compare
+     * @param n2 The second node to compare
+     * @return A Node to be linked to another
+     */
     private Node sortedMerge(Node n1, Node n2) {
+        // Our stop condition
         if (n1 == null)
             return n2;
         else if (n2 == null)
             return n1;
-        
+        // Pointer helper
         Node result;
-        
+        // If n2 is greater than n1
         if (Node.comparator(n1, n2) <= 0) {
+            // We link n1 to the next smaller node
             result = n1;
             result.setNext(sortedMerge(n1.getNext(), n2));
         } else {
+            // Work as same as above but chaging bot nodes
             result = n2;
             result.setNext(sortedMerge(n1, n2.getNext()));
         }
-        
+        // We return the selected node
         return result;
         
     }
     
+    /**
+     * Split our list in two halves and returns the reference to both list
+     * @param n The node head of our list that we are looking to split
+     * @return An array containing the references to our new two lists
+     */  
     private Node[] splitList(Node n) {
+        // Our stop condition
         if (n == null || n.getNext() == null)
             return new Node[]{ n, null };
-        
+        // We have two pointers, backward is behind forward, and forward moves faster
         Node backward = n;
         Node forward = n.getNext();
-        
+        // While we have not reach the end of our list
         while (forward != null) {
+            // We move our forward pointer twice
             forward = forward.getNext();
             if (forward != null) {
+                // And move backward one
                 backward = backward.getNext();
                 forward = forward.getNext();
             }
         }
-        
+        // Now we have the two head nodes for our list
         Node[] array = new Node[]{ n, backward.getNext() };
+        // Here we split the list in two
         backward.setNext(null);
+        // We return our array with the two new list head references
         return array;
     }
     
-    
+    /**
+     * Principal Method for Merge Sorting
+     * @param head The node to be based on recursion, is the variable that helps us make this algorithm work
+     * @complexity O (n log n)
+     * @return (Final return) the head node for our new sorted list
+    */
     public Node mergeSort(Node head) { // O(n log n)
+        // Our stop condition in this method
         if (head == null || head.getNext() == null)
             return head;
-        
+        // We split our list 
         Node[] array = splitList(head);
-        Node first_half = array[0];
-        Node second_half = array[1];
-        
+        Node first_half = array[0]; // First list obtained (reference to its head)
+        Node second_half = array[1]; // Second list obtained (reference to its head)
+        // We repeat the process until we reach som point where we cannot continue splitting anymore
         first_half = mergeSort(first_half);
         second_half = mergeSort(second_half);
-        
+        // In this step we do sort our list and link the nodes accordingly
         return sortedMerge(first_half, second_half);
     }
 
