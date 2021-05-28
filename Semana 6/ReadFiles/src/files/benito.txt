@@ -1,0 +1,11 @@
+﻿id_title_titleShort_album_link_duration_rank_explicitLyrics_preview
+608410262_Si Estuviésemos Juntos_Si Estuviésemos Juntos_X 100PRE_https://www.deezer.com/track/608410262_169_893577_TRUE_https://cdns-preview-9.dzcdn.net/stream/c-97c16cc22291d2021cdf9c033ecdf812-5.mp3
+686020062_Callaita_Callaita_Callaita_https://www.deezer.com/track/686020062_250_929946_TRUE_https://cdns-preview-4.dzcdn.net/stream/c-48796ac44f64a2349f465c06a3b32dcf-5.mp3
+811034282_Vete_Vete_Vete_https://www.deezer.com/track/811034282_192_928504_TRUE_https://cdns-preview-4.dzcdn.net/stream/c-41f8c7f5eda1d7e8147fdada881a23c7-5.mp3
+889550892_Yo Perreo Sola_Yo Perreo Sola_YHLQMDLG_https://www.deezer.com/track/889550892_172_917342_FALSE_https://cdns-preview-c.dzcdn.net/stream/c-ca32da8649d88756a88959e9779a8f6c-6.mp3
+608410242_Otra Noche en Miami_Otra Noche en Miami_X 100PRE_https://www.deezer.com/track/608410242_233_812693_TRUE_https://cdns-preview-0.dzcdn.net/stream/c-02ebbd4f978e905f1acb1b93613328a1-5.mp3
+889550882_La Santa_La Santa_YHLQMDLG_https://www.deezer.com/track/889550882_206_889656_TRUE_https://cdns-preview-9.dzcdn.net/stream/c-90ef24e2d127eaa8c3c22845e3ddb650-5.mp3
+1026676342_UN DIA (ONE DAY)_UN DIA (ONE DAY)_UN DIA (ONE DAY)_https://www.deezer.com/track/1026676342_232_979887_FALSE_https://cdns-preview-a.dzcdn.net/stream/c-a323bb18d0f3aaeb169f372202d270f7-4.mp3
+889550852_Si Veo a Tu Mamá_Si Veo a Tu Mamá_YHLQMDLG_https://www.deezer.com/track/889550852_170_900459_FALSE_https://cdns-preview-2.dzcdn.net/stream/c-25f10a358087b7a32604fff95c801cbf-6.mp3
+1155477832_HACIENDO QUE ME AMAS_HACIENDO QUE ME AMAS_EL ÚLTIMO TOUR DEL MUNDO_https://www.deezer.com/track/1155477832_217_885323_TRUE_https://cdns-preview-8.dzcdn.net/stream/c-8af7186a9d52d3af50f6f09e0b93aa07-3.mp3
+956716732_CÓMO SE SIENTE (Remix)_CÓMO SE SIENTE_LAS QUE NO IBAN A SALIR_https://www.deezer.com/track/956716732_227_845569_TRUE_https://cdns-preview-4.dzcdn.net/stream/c-4f1d3008e1eb76eae26d08edcf353153-5.mp3
